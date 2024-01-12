@@ -10,6 +10,8 @@ export default function Home() {
     <div>
       <div className="bg-white flex w-screen h-full">
         <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
+      </div>
+      <div className="flex justify-end items-end">
         <Sidebar setIsOpen={setIsOpen} isOpen={isOpen}></Sidebar>
       </div>
     </div>
