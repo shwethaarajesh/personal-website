@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
 import "./Sidebar.scss";
+import DownloadButton from "../components/DownloadButton/DownloadButton";
 export default function Sidebar(props: {
   isOpen: boolean;
   setIsOpen: Function;
@@ -34,7 +35,9 @@ export default function Sidebar(props: {
             return (
               <div
                 key={eachHeader}
-                className="border hover:bg-pink-100 border-x-0 border-t-0 cursor-pointer p-3 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-lg leading-6 capitalize font-medium  tracking-[-.4px]"
+                className="border hover:bg-pink-100 border-x-0 
+                border-t-0 cursor-pointer p-3 
+                hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-lg leading-6 capitalize font-medium  tracking-[-.4px]"
                 onClick={() => {
                   console.log("Clicked desc");
                 }}
@@ -45,25 +48,8 @@ export default function Sidebar(props: {
           })}
         </div>
         <div className=" w-full fixed bottom-0  mb-2 px-3">
-          <a
-            href="/personal-website/Resume.pdf"
-            download="Resume"
-            className=" w-full flex rounded bg-black text-white py-2 px-3 space-x-2 justify-center"
-            onClick={() => {
-              console.log("Resume downloaded");
-            }}
-          >
-            <div className={`text-sm leading-6 font-semibold `}>Resume</div>
-            <Image
-              src={"/personal-website/download.png"}
-              alt={"Download image"}
-              height={20}
-              width={20}
-              unoptimized
-            ></Image>
-          </a>
+          <DownloadButton title="Resume" variation="mobile"></DownloadButton>
         </div>
-        {/* Your sidebar content goes here */}
       </div>
     </div>
   );

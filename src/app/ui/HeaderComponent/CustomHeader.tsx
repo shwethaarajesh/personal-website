@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { sora } from "../fonts";
 import { MdOutlineMenu } from "react-icons/md";
+import TabButton from "../components/TabButton/TabButton";
+import DownloadButton from "../components/DownloadButton/DownloadButton";
 
 export default function CustomHeader(props: {
   isOpen: boolean;
@@ -26,34 +28,11 @@ export default function CustomHeader(props: {
         </div>
         <div className=" hidden md:flex justify-center items-center space-x-8">
           {headers.map((eachHeader) => (
-            <button
-              key={eachHeader}
-              className=" py-4 px-3 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-sm leading-6 capitalize font-semibold tracking-[-.4px]"
-            >
-              {eachHeader}
-            </button>
+            <TabButton headername={eachHeader}></TabButton>
           ))}
         </div>
 
-        <a
-          href="/personal-website/Resume.pdf"
-          download="Resume"
-          className="hidden md:flex rounded bg-black text-white py-4 px-5 space-x-2 justify-center"
-          onClick={() => {
-            console.log("Resume downloaded");
-          }}
-        >
-          <div className={`text-sm leading-6 font-semibold ${sora.className}`}>
-            Resume
-          </div>
-          <Image
-            src={"/personal-website/download.png"}
-            alt={"Download image"}
-            height={20}
-            unoptimized
-            width={20}
-          ></Image>
-        </a>
+        <DownloadButton title="Resume"></DownloadButton>
         <button
           onClick={() => {
             props.setIsOpen(!props.isOpen);
