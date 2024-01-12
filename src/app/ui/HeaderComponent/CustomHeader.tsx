@@ -35,7 +35,9 @@ export default function CustomHeader(props: {
           ))}
         </div>
 
-        <button
+        <a
+          href="/personal-website/Resume.pdf"
+          download="Resume"
           className="hidden md:flex rounded bg-black text-white py-4 px-5 space-x-2 justify-center"
           onClick={() => {
             console.log("Resume downloaded");
@@ -51,7 +53,7 @@ export default function CustomHeader(props: {
             unoptimized
             width={20}
           ></Image>
-        </button>
+        </a>
         <button
           onClick={() => {
             props.setIsOpen(!props.isOpen);
