@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    basePath: '/github-pages/personal-website',
-    }
-    
+    images: {
+      loader: 'akamai',
+      path: '',
+    },
+    assetPrefix: '/personal-website',
+  };
     module.exports = nextConfig
