@@ -57,6 +57,7 @@ export default function Sidebar(props: {
               alt={"Download image"}
               height={20}
               width={20}
+              unoptimized
             ></Image>
           </button>
         </div>
