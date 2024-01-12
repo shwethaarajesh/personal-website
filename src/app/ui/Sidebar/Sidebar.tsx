@@ -53,7 +53,7 @@ export default function Sidebar(props: {
           >
             <div className={`text-sm leading-6 font-semibold `}>Resume</div>
             <Image
-              src={"/download.png"}
+              src={"/personal-website/download.png"}
               alt={"Download image"}
               height={20}
               width={20}
