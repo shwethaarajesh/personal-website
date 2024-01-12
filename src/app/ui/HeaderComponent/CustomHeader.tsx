@@ -15,11 +15,12 @@ export default function CustomHeader(props: {
       <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">
           <Image
-            src="/logo-name.png"
+            src="/Logo-name.png"
             className=" rounded-full my-2"
             alt="Vercel Logo"
             width={190}
             height={140}
+            unoptimized
           />
           {/* <div className="text-sm italic ">Hello</div> */}
         </div>
@@ -47,6 +48,7 @@ export default function CustomHeader(props: {
             src={"/download.png"}
             alt={"Download image"}
             height={20}
+            unoptimized
             width={20}
           ></Image>
         </button>
