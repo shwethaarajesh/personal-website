@@ -9,8 +9,15 @@ export default function Home() {
   return (
     <div className="bg-white  w-screen h-full">
       <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
-      <div className="flex justify-end items-end">
-        <Sidebar setIsOpen={setIsOpen} isOpen={isOpen}></Sidebar>
+      <div className="flex justify-between">
+        <div className="w-full m-8">
+          <div className=" h-60 border border-black items-center flex justify-center">
+            Content Coming soon
+          </div>
+        </div>
+        <div className="items-end justify-end">
+          <Sidebar setIsOpen={setIsOpen} isOpen={isOpen}></Sidebar>
+        </div>
       </div>
     </div>
   );
