@@ -17,7 +17,7 @@ export default function CustomHeader(props: {
           <Image
             src="/personal-website/Logo-name.png"
             className=" rounded-full my-2"
-            alt="Vercel Logo"
+            alt="Shwethaa Rajesh"
             width={190}
             height={140}
             unoptimized

@@ -16,7 +16,7 @@ export default function Sidebar(props: {
   }, [props.isOpen]);
   const headers = ["About", "Skills", "Projects", "Contact me"];
   return (
-    <div className={` ${props.isOpen ? "block" : "block"}`}>
+    <div className={` md:hidden ${props.isOpen ? "block" : "block"}`}>
       <div
         className={`h-screen border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
           props.isOpen ? "w-64" : "w-0"
