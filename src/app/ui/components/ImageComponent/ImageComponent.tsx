@@ -19,6 +19,7 @@ export default function ImageComponent(props: {
       className={props.className || ""}
       height={props.height}
       width={props.width}
+      unoptimized
     ></Image>
   );
 }

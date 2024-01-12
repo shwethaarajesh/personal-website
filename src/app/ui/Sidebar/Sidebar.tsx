@@ -47,7 +47,7 @@ export default function Sidebar(props: {
             );
           })}
         </div>
-        <div className=" w-full fixed bottom-0  mb-2 px-3">
+        <div className=" w-full fixed bottom-0  mb-3 px-3">
           <DownloadButton title="Resume" variation="mobile"></DownloadButton>
         </div>
       </div>
