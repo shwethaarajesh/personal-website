@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
-import { sora } from "../fonts";
 import { MdOutlineMenu } from "react-icons/md";
 import TabButton from "../components/TabButton/TabButton";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
+import ImageComponent from "../components/ImageComponent/ImageComponent";
 
 export default function CustomHeader(props: {
   isOpen: boolean;
@@ -16,13 +15,12 @@ export default function CustomHeader(props: {
     >
       <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">
-          <Image
-            src="/personal-website/Logo-name.png"
+          <ImageComponent
+            title="Logo-name.png"
             className=" rounded-full my-2"
             alt="Shwethaa Rajesh"
             width={190}
-            height={140}
-            unoptimized
+            height={190}
           />
           {/* <div className="text-sm italic ">Hello</div> */}
         </div>

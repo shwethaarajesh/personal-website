@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import clsx from "clsx";
+import ImageComponent from "../ImageComponent/ImageComponent";
 
 export default function DownloadButton(props: {
   title: string;
@@ -20,13 +20,12 @@ export default function DownloadButton(props: {
       }}
     >
       <div className={`text-sm leading-6 font-semibold`}>{props.title}</div>
-      <Image
-        src={"/personal-website/download.png"}
+      <ImageComponent
+        title={"download.png"}
         alt={"Download image"}
         height={20}
-        unoptimized
         width={20}
-      ></Image>
+      ></ImageComponent>
     </a>
   );
 }
