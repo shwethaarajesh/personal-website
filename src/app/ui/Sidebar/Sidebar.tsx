@@ -45,7 +45,9 @@ export default function Sidebar(props: {
           })}
         </div>
         <div className=" w-full fixed bottom-0  mb-2 px-3">
-          <button
+          <a
+            href="/personal-website/Resume.pdf"
+            download="Resume"
             className=" w-full flex rounded bg-black text-white py-2 px-3 space-x-2 justify-center"
             onClick={() => {
               console.log("Resume downloaded");
@@ -59,7 +61,7 @@ export default function Sidebar(props: {
               width={20}
               unoptimized
             ></Image>
-          </button>
+          </a>
         </div>
         {/* Your sidebar content goes here */}
       </div>
