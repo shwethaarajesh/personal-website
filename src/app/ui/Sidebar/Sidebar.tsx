@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { MdClose } from "react-icons/md";
-
+import "./Sidebar.scss";
 export default function Sidebar(props: {
   isOpen: boolean;
   setIsOpen: Function;
@@ -18,13 +18,13 @@ export default function Sidebar(props: {
   return (
     <div className={` md:hidden ${props.isOpen ? "block" : "block"}`}>
       <div
-        className={`h-screen border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
+        className={` sidebar-height  border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
           props.isOpen ? " sm:w-60 w-48" : "w-0"
         }`}
         style={{ transition: "width 300ms cubic-bezier(0.2,0,0,1) 0s" }}
       >
         <button
-          className="text-white w-full items-end pt-4 pb-0 px-4 flex justify-end "
+          className="text-white w-full items-end py-3 px-4 flex justify-end "
           onClick={toggleSidebar}
         >
           <MdClose className="text-black"></MdClose>
