@@ -19,12 +19,12 @@ export default function Sidebar(props: {
     <div className={` md:hidden ${props.isOpen ? "block" : "block"}`}>
       <div
         className={`h-screen border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
-          props.isOpen ? "w-64" : "w-0"
+          props.isOpen ? " sm:w-60 w-48" : "w-0"
         }`}
         style={{ transition: "width 300ms cubic-bezier(0.2,0,0,1) 0s" }}
       >
         <button
-          className="text-white w-full items-end pt-3 pb-1 px-4 flex justify-end "
+          className="text-white w-full items-end pt-4 pb-0 px-4 flex justify-end "
           onClick={toggleSidebar}
         >
           <MdClose className="text-black"></MdClose>

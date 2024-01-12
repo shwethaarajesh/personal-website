@@ -59,7 +59,7 @@ export default function CustomHeader(props: {
             props.setIsOpen(!props.isOpen);
             window.dispatchEvent(new Event("resize"));
           }}
-          className="block md:hidden"
+          className={`block md:hidden ${props.isOpen && "invisible"}`}
         >
           <MdOutlineMenu size={32} />
         </button>
