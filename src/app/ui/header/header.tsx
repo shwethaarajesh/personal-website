@@ -1,12 +1,20 @@
 "use client";
 import Image from "next/image";
 import { sora } from "../fonts";
+import Sidebar from "../Sidebar/Sidebar";
+import { useState } from "react";
+import { MdOutlineMenu } from "react-icons/md";
 
-export default function Header() {
+export default function Header(props: {
+  isOpen: boolean;
+  setIsOpen: Function;
+}) {
   const headers = ["About", "Skills", "Projects", "Contact me"];
   return (
-    <div className="bg-pink-50 px-2   lg:px-12 xl:px-16  2xl:px-20 py-6 ">
-      <div className=" md:px-8 flex justify-between items-center">
+    <div
+      className={` w-full h-[100px] bg-pink-50 px-2 flex  lg:px-12 xl:px-16  2xl:px-20 py-6 `}
+    >
+      <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">
           <Image
             src="/logo-1.png"
@@ -17,9 +25,12 @@ export default function Header() {
           />
           <div className="text-sm italic ">Hello</div>
         </div>
-        <div className="flex justify-center items-center space-x-8">
+        <div className=" hidden md:flex justify-center items-center space-x-8">
           {headers.map((eachHeader) => (
-            <button className=" py-4 px-3 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-sm leading-6 capitalize font-semibold tracking-[-.4px]">
+            <button
+              key={eachHeader}
+              className=" py-4 px-3 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-sm leading-6 capitalize font-semibold tracking-[-.4px]"
+            >
               {eachHeader}
             </button>
           ))}
@@ -41,7 +52,19 @@ export default function Header() {
             width={20}
           ></Image>
         </button>
+        <button
+          onClick={() => {
+            props.setIsOpen(!props.isOpen);
+            window.dispatchEvent(new Event("resize"));
+          }}
+          className="block md:hidden"
+        >
+          <MdOutlineMenu size={32} />
+        </button>
       </div>
+      {/* <div>
+        {<Sidebar setIsOpen={props.setIsOpen} isOpen={props.isOpen}></Sidebar>}
+      </div> */}
     </div>
   );
 }
