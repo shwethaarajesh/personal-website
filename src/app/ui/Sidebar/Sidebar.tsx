@@ -9,18 +9,24 @@ export default function Sidebar(props: {
   setIsOpen: Function;
 }) {
   const toggleSidebar = () => {
-    props.setIsOpen(!props.isOpen);
+    setIsOpenSidebar(!props.isOpen);
+    setTimeout(() => {
+      props.setIsOpen(!props.isOpen);
+    }, 100);
+    // props.setIsOpen(!props.isOpen);
   };
-  const [animation, setAnimation] = useState(false);
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   useEffect(() => {
-    setAnimation(true);
+    // setTimeout(() => {}, 0);
+    setIsOpenSidebar(props.isOpen);
   }, [props.isOpen]);
+
   const headers = ["About", "Skills", "Projects", "Contact me"];
   return (
-    <div className={` md:hidden ${props.isOpen ? "block" : "block"}`}>
+    <div className={` md:hidden ${props.isOpen ? "block" : "hidden"}`}>
       <div
         className={` sidebar-height  border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
-          props.isOpen ? " sm:w-60 w-48" : "w-0"
+          isOpenSidebar ? " sm:w-60 w-48" : "w-0"
         }`}
         style={{ transition: "width 300ms cubic-bezier(0.2,0,0,1) 0s" }}
       >
