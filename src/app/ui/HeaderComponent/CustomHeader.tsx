@@ -1,11 +1,9 @@
 "use client";
 import Image from "next/image";
 import { sora } from "../fonts";
-import Sidebar from "../Sidebar/Sidebar";
-import { useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 
-export default function Header(props: {
+export default function CustomHeader(props: {
   isOpen: boolean;
   setIsOpen: Function;
 }) {
