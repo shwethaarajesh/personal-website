@@ -17,13 +17,13 @@ export default function Header(props: {
       <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">
           <Image
-            src="/logo-1.png"
+            src="/logo-name.png"
             className=" rounded-full my-2"
             alt="Vercel Logo"
-            width={24}
-            height={24}
+            width={190}
+            height={140}
           />
-          <div className="text-sm italic ">Hello</div>
+          {/* <div className="text-sm italic ">Hello</div> */}
         </div>
         <div className=" hidden md:flex justify-center items-center space-x-8">
           {headers.map((eachHeader) => (
@@ -37,7 +37,7 @@ export default function Header(props: {
         </div>
 
         <button
-          className="rounded bg-black text-white py-4 px-5 flex space-x-2 justify-center"
+          className="hidden md:flex rounded bg-black text-white py-4 px-5 space-x-2 justify-center"
           onClick={() => {
             console.log("Resume downloaded");
           }}
@@ -62,9 +62,6 @@ export default function Header(props: {
           <MdOutlineMenu size={32} />
         </button>
       </div>
-      {/* <div>
-        {<Sidebar setIsOpen={props.setIsOpen} isOpen={props.isOpen}></Sidebar>}
-      </div> */}
     </div>
   );
 }
