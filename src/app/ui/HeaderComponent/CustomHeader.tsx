@@ -26,7 +26,9 @@ export default function CustomHeader(props: {
         </div>
         <div className=" hidden md:flex justify-center items-center space-x-8">
           {headers.map((eachHeader) => (
-            <TabButton headername={eachHeader}></TabButton>
+            <div key={eachHeader}>
+              <TabButton headername={eachHeader}></TabButton>
+            </div>
           ))}
         </div>
 
