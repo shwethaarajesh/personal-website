@@ -1,5 +1,7 @@
 "use client";
 
+import { SkillInterface, skillCategoryInterface } from "@/app/lib/SkillType";
+import SkillCategories from "../components/SkillCategories/SkillCategories";
 import SkillComponent from "../components/SkillComponent/SkillComponent";
 
 // Programming Languages:
@@ -31,7 +33,85 @@ import SkillComponent from "../components/SkillComponent/SkillComponent";
   "Python",
 ];
 export default function Skills() {
-  const skillsList = [
+  const skillCategories: skillCategoryInterface[] = [
+    {
+      category: "Web Development ",
+      list: [
+        {
+          name: "ReactJS",
+          icon: "icon-react.png",
+        },
+        {
+          name: "NextJS",
+          icon: "icon-nextjs.png",
+        },
+        {
+          name: "Storybook",
+          icon: "icon-storybook.png",
+        },
+        {
+          name: "Builder.io",
+          icon: "icon-builder.png",
+        },
+        {
+          name: "Tailwind css",
+          icon: "icon-tailwind.png",
+        },
+        {
+          name: "Scss",
+          icon: "icon-sass.png",
+        },
+        {
+          name: "Styled components",
+          icon: "icon-styledcomponents.png",
+        },
+      ],
+    },
+    {
+      category: "Mobile Development",
+      list: [
+        {
+          name: "React Native",
+          icon: "icon-react.png",
+        },
+        {
+          name: "Xamarin Forms",
+          icon: "icon-xamarin.png",
+        },
+      ],
+    },
+    {
+      category: "Programming Languages",
+      list: [
+        {
+          name: "Javascript",
+          icon: "icon-js.png",
+        },
+        {
+          name: "Typescript",
+          icon: "icon-ts.png",
+        },
+        {
+          name: "C#",
+          icon: "icon-csharp.png",
+        },
+        {
+          name: "Python",
+          icon: "icon-python.png",
+        },
+      ],
+    },
+    {
+      category: "Version Control",
+      list: [
+        {
+          name: "Git",
+          icon: "icon-git.png",
+        },
+      ],
+    },
+  ];
+  const skillsList: SkillInterface[] = [
     {
       name: "Git",
       icon: "icon-git.png",
@@ -99,9 +179,10 @@ export default function Skills() {
           Skills
         </div>
       </div>
-      <div className="flex justify-center items-center lg:mx-12 mt-5">
-        <div
-          className=" w-full grid grid-cols-2 xs:grid-cols-3
+      <div className="  mt-5">
+        <SkillCategories categories={skillCategories}></SkillCategories>
+        {/* <div
+          className=" lg:mx-12 w-full grid grid-cols-2 xs:grid-cols-3
                          md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 
                          2xl:grid-cols-7 3xl:grid-cols-8 gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7 "
         >
@@ -113,7 +194,7 @@ export default function Skills() {
               ></SkillComponent>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
