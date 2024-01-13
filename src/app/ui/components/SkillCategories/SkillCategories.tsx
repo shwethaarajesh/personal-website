@@ -3,7 +3,8 @@
 import { SkillInterface, skillCategoryInterface } from "@/app/lib/SkillType";
 import { useState } from "react";
 import SkillComponent from "../SkillComponent/SkillComponent";
-
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "./SkillCategories.css";
 export default function SkillCategories(props: {
   categories: skillCategoryInterface[];
 }) {
@@ -44,21 +45,19 @@ export default function SkillCategories(props: {
           );
         })}
       </div>
-
-      <div
-        className=" lg:px-12 border my-4  py-4 px-4 md:px-6 grid grid-cols-2 sm:grid-cols-3
+      <TransitionGroup
+        className="lg:px-12 border my-4 py-4 px-4 md:px-6 grid grid-cols-2 sm:grid-cols-3
                          md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 
-                         2xl:grid-cols-7 3xl:grid-cols-8 gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7 "
+                         2xl:grid-cols-7 3xl:grid-cols-8 gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7"
       >
         {skillList.map((eachSkill) => (
-          <div key={eachSkill.name}>
-            <SkillComponent
-              skillName={eachSkill.name}
-              url={eachSkill.icon}
-            ></SkillComponent>
-          </div>
+          <CSSTransition key={eachSkill.name} timeout={300} classNames="fade">
+            <div>
+              <SkillComponent skillName={eachSkill.name} url={eachSkill.icon} />
+            </div>
+          </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
     </div>
   );
 }
