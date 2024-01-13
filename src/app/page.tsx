@@ -11,7 +11,7 @@ export default function Home() {
     <div className="bg-white  w-screen h-full">
       <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
       <div className="flex justify-between">
-        <div className="w-full m-8">
+        <div className="w-full mx-8">
           <Skills></Skills>
           <div className=" h-60 border border-black items-center flex justify-center">
             Content Coming soon

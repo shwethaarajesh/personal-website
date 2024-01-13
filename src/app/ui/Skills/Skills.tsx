@@ -90,7 +90,7 @@ export default function Skills() {
     },
   ];
   return (
-    <div className="mb-8">
+    <div className="mb-8 px-4 py-10 lg:py-15">
       <div className="flex gap-1 justify-center items-center">
         <div className=" text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
           My
@@ -99,8 +99,12 @@ export default function Skills() {
           Skills
         </div>
       </div>
-      <div className="flex justify-center items-center">
-        <div className=" w-full lg:mx-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 3xl:grid-cols-8 gap-x-3 gap-y-4 ">
+      <div className="flex justify-center items-center lg:mx-12 mt-5">
+        <div
+          className=" w-full grid grid-cols-2 xs:grid-cols-3
+                         md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 
+                         2xl:grid-cols-7 3xl:grid-cols-8 gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7 "
+        >
           {skillsList.map((eachSkill) => (
             <div key={eachSkill.name}>
               <SkillComponent
