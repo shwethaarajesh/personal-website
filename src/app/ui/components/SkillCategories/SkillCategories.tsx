@@ -21,21 +21,24 @@ export default function SkillCategories(props: {
   return (
     <div className="w-full">
       <div className="grid grid-cols-2 xs:grid:cols-2 sm:grid-cols-3 md:grid-cols-4 flex-col items-start gap-4  ">
-        {categoryList.map((eachCategory: skillCategoryInterface) => (
-          <button
-            key={eachCategory.category}
-            onClick={() => {
-              onClickCategory(eachCategory.category, eachCategory.list);
-            }}
-            className={`p-3 ${
-              selectedCategory == eachCategory.category
-                ? "bg-pink-200"
-                : "bg-pinl-50"
-            } bg-pink-50  aspect-video flex justify-center items-center text-sm`}
-          >
-            {eachCategory.category}
-          </button>
-        ))}
+        {categoryList.map((eachCategory: skillCategoryInterface) => {
+          console.log(eachCategory.category, selectedCategory);
+          return (
+            <button
+              key={eachCategory.category}
+              onClick={() => {
+                onClickCategory(eachCategory.category, eachCategory.list);
+              }}
+              className={`p-3 ${
+                selectedCategory == eachCategory.category
+                  ? "bg-pink-200"
+                  : "bg-pinl-50"
+              } bg-pink-50  aspect-video flex justify-center items-center text-sm`}
+            >
+              {eachCategory.category}
+            </button>
+          );
+        })}
       </div>
 
       <div
