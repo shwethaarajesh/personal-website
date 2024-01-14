@@ -17,6 +17,7 @@ const config: Config = {
     screens: {
       '3xl': '2000px',
       'xs': '515px',
+      'xsm': '480px',
     },
     },
   },

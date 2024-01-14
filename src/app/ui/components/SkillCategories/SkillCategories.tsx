@@ -46,7 +46,7 @@ export default function SkillCategories(props: {
         })}
       </div>
       <TransitionGroup
-        className="lg:px-12 border my-4 py-4 px-4 md:px-6 grid grid-cols-2 sm:grid-cols-3
+        className="lg:px-12 border my-4 py-4 px-4 md:px-6 grid grid-cols-2 xsm:grid-cols-3
                          md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 
                          2xl:grid-cols-7 3xl:grid-cols-8 gap-x-5 md:gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7"
       >
