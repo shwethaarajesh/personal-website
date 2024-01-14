@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="bg-white  w-screen h-full">
       <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
-      <div className="flex justify-between">
+      <div className="flex justify-between pt-[100px] pb-12">
         <div className="w-full mx-8">
           <Skills></Skills>
           <div className=" h-60 border border-black items-center flex justify-center">

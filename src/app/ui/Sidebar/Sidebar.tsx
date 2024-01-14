@@ -23,7 +23,11 @@ export default function Sidebar(props: {
 
   const headers = ["About", "Skills", "Projects", "Contact me"];
   return (
-    <div className={` md:hidden ${props.isOpen ? "block" : "hidden"}`}>
+    <div
+      className={` md:hidden ${
+        props.isOpen ? "fixed top-[100px] right-0" : "hidden"
+      }`}
+    >
       <div
         className={` sidebar-height  border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
           isOpenSidebar ? " sm:w-60 w-48" : "w-0"
