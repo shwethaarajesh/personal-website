@@ -4,8 +4,8 @@ import ImageComponent from "../components/ImageComponent/ImageComponent";
 
 export default function Intro() {
   return (
-    <div className="py-10 px-4 lg:py-[60px] gap-6 lg:gap-6 lg:px-20 flex flex-col-reverse items-center  lg:flex-row lg:justify-between">
-      <div className="px-4">
+    <div className="my-10 py-10 border border-pink-50 shadow-pink-200 shadow-md mx-4 lg:py-[60px] gap-6 lg:gap-6 lg:px-20 flex flex-col-reverse items-center  lg:flex-row lg:justify-between">
+      <div className="px-4 ">
         <div className="flex-col flex items-center lg:items-start ">
           <div className="flex gap-2">
             <div className=" text-2xl lg:text-3xl font-normal leading-8 lg:leading-[56px] tracking-[-0.96px]">
