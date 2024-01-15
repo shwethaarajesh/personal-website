@@ -84,7 +84,7 @@ export default function Skills() {
     },
   ];
   return (
-    <div className="mb-8 px-4 py-10 lg:py-15">
+    <div className="px-4 pt-10 lg:py-15">
       <div className="flex gap-1 justify-center items-center">
         <div className=" text-xl lg:text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
           My

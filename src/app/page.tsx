@@ -5,6 +5,7 @@ import { useState } from "react";
 import CustomHeader from "./ui/HeaderComponent/CustomHeader";
 import Skills from "./ui/Skills/Skills";
 import Intro from "./ui/Intro/Intro";
+import Experiences from "./ui/Experiences/Experiences";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function Home() {
         <div className="w-full lg:mx-8">
           <Intro></Intro>
           <Skills></Skills>
+          <Experiences></Experiences>
           <div className=" h-60 border border-black items-center flex justify-center">
             Content Coming soon
           </div>
