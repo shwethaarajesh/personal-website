@@ -19,19 +19,19 @@ export default function Experiences() {
             designation="Software Developer I at Mckinsey & Company"
             duration="Aug 2022 - Jan 2024"
             description=""
-            icon=""
+            icon="mck-icon.webp"
           ></ExperienceComponent>
           <ExperienceComponent
             designation="Software Developer Intern at Mckinsey & Company"
             duration="Feb 2022 - Aug 2022"
             description=""
-            icon=""
+            icon="mck-icon.webp"
           ></ExperienceComponent>
           <ExperienceComponent
-            designation="Research Intern and Samsung Research institute"
+            designation="Research Intern at Samsung Research Institute"
             duration="Sep 2020 - Nov 2021"
             description=""
-            icon=""
+            icon="samsung-icon.jpeg"
           ></ExperienceComponent>
         </div>
       </div>
