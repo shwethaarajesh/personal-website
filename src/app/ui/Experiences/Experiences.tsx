@@ -29,7 +29,7 @@ export default function Experiences() {
           ></ExperienceComponent>
           <ExperienceComponent
             designation="Research Intern and Samsung Research institute"
-            duration="Aug 2022 - Jan 2024"
+            duration="Sep 2020 - Nov 2021"
             description=""
             icon=""
           ></ExperienceComponent>
