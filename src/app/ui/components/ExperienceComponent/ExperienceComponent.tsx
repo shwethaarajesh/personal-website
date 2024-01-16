@@ -28,7 +28,7 @@ export default function ExperienceComponent(props: IExperience) {
         </div>
       </div>
       <div className="text-xs font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm">
-        Desc
+        {props.description}
       </div>
     </div>
   );
