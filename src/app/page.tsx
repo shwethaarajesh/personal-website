@@ -6,6 +6,7 @@ import CustomHeader from "./ui/HeaderComponent/CustomHeader";
 import Skills from "./ui/Skills/Skills";
 import Intro from "./ui/Intro/Intro";
 import Experiences from "./ui/Experiences/Experiences";
+import AboutMe from "./ui/AboutMe/AboutMe";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function Home() {
           <Intro></Intro>
           <Skills></Skills>
           <Experiences></Experiences>
+          <AboutMe></AboutMe>
           <div className=" h-60 border border-black items-center flex justify-center">
             Content Coming soon
           </div>
