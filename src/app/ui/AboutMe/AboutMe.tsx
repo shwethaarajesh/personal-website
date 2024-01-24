@@ -14,7 +14,7 @@ export default function AboutMe() {
           ></ImageComponent>
         </div>
         <div className="flex flex-col ">
-          <div className="flex gap-1 py-3 lg:py-5 justify-center items-center lg:justify-start lg:items-start">
+          <div className="flex gap-2 py-3 lg:py-5 justify-center items-center lg:justify-start lg:items-start">
             <div className=" text-xl lg:text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
               About
             </div>
