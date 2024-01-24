@@ -14,11 +14,18 @@ export default function Home() {
     <div className="bg-white  w-screen h-full">
       <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
       <div className="flex justify-between pt-[100px] pb-12">
-        <div className="w-full lg:mx-8">
-          <Intro></Intro>
-          <Skills></Skills>
+        <div className="w-full">
+          <div className="lg:mx-8">
+            <Intro></Intro>
+          </div>
+          <div className="lg:mx-8">
+            <Skills></Skills>
+          </div>
           <Experiences></Experiences>
-          <AboutMe></AboutMe>
+
+          <div className="lg:mx-8">
+            <AboutMe></AboutMe>
+          </div>
           <div className=" h-60 border border-black items-center flex justify-center">
             Content Coming soon
           </div>
