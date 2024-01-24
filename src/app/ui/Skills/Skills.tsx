@@ -89,7 +89,7 @@ export default function Skills() {
         <div className=" text-xl lg:text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
           My
         </div>
-        <div className=" text-xl lg:text-3xl font-medium leading-[56px] tracking-[-0.96px] ">
+        <div className=" text-xl lg:text-3xl font-semibold leading-[56px] tracking-[-0.96px] ">
           Skills
         </div>
       </div>

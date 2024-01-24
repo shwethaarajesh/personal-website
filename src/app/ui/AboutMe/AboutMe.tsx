@@ -18,7 +18,7 @@ export default function AboutMe() {
             <div className=" text-xl lg:text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
               About
             </div>
-            <div className=" text-xl lg:text-3xl font-medium leading-[56px] tracking-[-0.96px] ">
+            <div className=" text-xl lg:text-3xl font-semibold leading-[56px] tracking-[-0.96px] ">
               Me
             </div>
           </div>
