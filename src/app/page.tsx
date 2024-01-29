@@ -8,6 +8,7 @@ import Intro from "./ui/Intro/Intro";
 import Experiences from "./ui/Experiences/Experiences";
 import AboutMe from "./ui/AboutMe/AboutMe";
 import MyProjects from "./ui/MyProjects/MyProjects";
+import ContactUs from "./ui/ContactUs/ContactUs";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +30,10 @@ export default function Home() {
           </div>
 
           <MyProjects></MyProjects>
+
+          <div className="lg:mx-8">
+            <ContactUs></ContactUs>
+          </div>
           <div className=" h-60 border border-black items-center flex justify-center">
             Content Coming soon
           </div>
