@@ -19,13 +19,13 @@ export default function CustomHeader(props: {
     >
       <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">
-          <ImageComponent
+          {/* <ImageComponent
             title="Logo-name.png"
             className=" rounded-full my-2"
             alt="Shwethaa Rajesh"
             width={190}
             height={190}
-          />
+          /> */}
           {/* <div className="text-sm italic ">Hello</div> */}
         </div>
         <div className=" hidden md:flex justify-center items-center space-x-8">

@@ -16,6 +16,7 @@ export default function Home() {
   const skillsRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const headers = [
     {
       name: "Skills",
@@ -24,6 +25,10 @@ export default function Home() {
     {
       name: "Experiences",
       ref: experiencesRef,
+    },
+    {
+      name: "About Me",
+      ref: aboutRef,
     },
     {
       name: "Projects",
@@ -52,7 +57,7 @@ export default function Home() {
           <div className="scroll-mt-[100px]" ref={experiencesRef}>
             <Experiences></Experiences>
           </div>
-          <div className="lg:mx-8 scroll-mt-[100px]">
+          <div ref={aboutRef} className="lg:mx-8 scroll-mt-[100px]">
             <AboutMe></AboutMe>
           </div>
           <div ref={projectsRef} className="scroll-mt-[100px]">
