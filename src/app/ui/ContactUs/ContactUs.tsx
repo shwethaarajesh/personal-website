@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
   const [name, setName] = useState("");
@@ -20,36 +21,70 @@ export default function ContactUs() {
   const handleDescriptionChange = (e: any) => {
     setDescription(e.target.value);
   };
+
+  useEffect(() => {
+    emailjs.init("twidWX-mn7fzgmK1S");
+  }, []);
+  const onClickGetInTouch = () => {
+    if (!name || !email || !description) {
+      alert("Name, Email and Description are required");
+      return;
+    }
+    emailjs
+      .sendForm(
+        "service_5kftdvq",
+        "template_jtueuyn",
+        form.current || "",
+        "twidWX-mn7fzgmK1S"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+  const form = useRef<HTMLFormElement>(null);
   return (
     <div className="mx-4 py-10 lg:py-[60px] flex flex-col lg:grid lg:grid-cols-2 lg:gap-24 lg:px-8 start items-start lg:items-center">
       <div className="w-full flex flex-col py-5 justify-center items-start self-stretch gap-5 ">
-        <textarea
-          placeholder="Your name"
-          value={name}
-          onChange={handleNameChange}
-          className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
-        ></textarea>
-        <textarea
-          placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
-          className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
-        ></textarea>
-        <textarea
-          value={website}
-          onChange={handleWebsiteChange}
-          placeholder="Your website (if exists)"
-          className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
-        ></textarea>
-        <textarea
-          value={description}
-          onChange={handleDescriptionChange}
-          placeholder="How can I help?"
-          className=" min-h-[140px] text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
-        ></textarea>
-
+        <form ref={form}>
+          <textarea
+            placeholder="Your name"
+            name="name"
+            value={name}
+            onChange={handleNameChange}
+            className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
+          ></textarea>
+          <textarea
+            placeholder="Email"
+            name="email"
+            value={email}
+            onChange={handleEmailChange}
+            className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
+          ></textarea>
+          <textarea
+            value={website}
+            name="website"
+            onChange={handleWebsiteChange}
+            placeholder="Your website (if exists)"
+            className=" text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
+          ></textarea>
+          <textarea
+            value={description}
+            name="description"
+            onChange={handleDescriptionChange}
+            placeholder="How can I help?"
+            className=" min-h-[140px] text-base font-normal leading-5 tracking-[-0.32px] text-zinc-500 py-4 px-6 border border-black w-full rounded-[4px] resize-none"
+          ></textarea>
+        </form>
         <div className="flex gap-6">
-          <button className="px-4 py-3 items-center text-white justify-center rounded-[4px] bg-black text-base font-semibold leading-5 tracking-[0.32px]">
+          <button
+            onClick={onClickGetInTouch}
+            className="px-4 py-3 items-center text-white justify-center rounded-[4px] bg-black text-base font-semibold leading-5 tracking-[0.32px]"
+          >
             Get In Touch
           </button>
           <a

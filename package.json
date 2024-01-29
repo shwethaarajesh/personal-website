@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "clsx": "^2.1.0",
     "next": "14.0.4",
     "react": "^18",

@@ -23,6 +23,7 @@ export default function MyProjects() {
             {arr.map((eachItem, i) => {
               return (
                 <div
+                  key={i}
                   className={` flex flex-col justify-between self-stretch py-5 lg:items-center gap-7 lg:gap-20 ${
                     i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                   }`}
