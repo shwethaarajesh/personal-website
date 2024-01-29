@@ -4,6 +4,20 @@ import ImageComponent from "../components/ImageComponent/ImageComponent";
 
 export default function MyProjects() {
   const arr = [1, 2, 3];
+  const projects = [
+    {
+      name: "Assessing Audio Quality using Deep Learning",
+      image: "project-sample.jpeg",
+      description:
+        "Developed non-intrusive deep learning models for Mean Opinion Score (MOS) prediction in VoIP calls, utilizing Dilated CNN, Bidirectional LSTM, and Bidirectional GRU architectures. Trained models on a custom dataset with pseudo and ground truth MOS values, employing MFCC features. Achieved optimal performance with Bidirectional LSTM, demonstrating superior accuracy, while Bidirectional GRU exhibited faster execution. Results compared with state-of-the-art models showcase competitive performance",
+    },
+    {
+      name: "Classification of DBT Images for Breast Cancer Detection",
+      image: "project-sample.jpeg",
+      description:
+        "Developed a robust deep learning model using ResNet and VGG for accurate Digital Breast Tomosynthesis (DBT) image classification, supporting early breast cancer detection. The system aids radiologists in clinical decision-making, with ongoing opportunities for performance enhancement through dataset expansion and higher image resolutions.",
+    },
+  ];
   const printNumber = (val: number) => {
     return val < 10 ? "0" + val.toString() : val.toString();
   };
@@ -20,7 +34,7 @@ export default function MyProjects() {
             </div>
           </div>
           <div>
-            {arr.map((eachItem, i) => {
+            {projects.map((eachItem, i) => {
               return (
                 <div
                   key={i}
@@ -31,7 +45,7 @@ export default function MyProjects() {
                   <div>
                     <ImageComponent
                       className=" w-full rounded-[18.761px]"
-                      title={"project-sample.jpeg"}
+                      title={eachItem.image}
                       alt={"Project image"}
                     ></ImageComponent>
                   </div>
@@ -40,14 +54,10 @@ export default function MyProjects() {
                       {printNumber(i + 1)}
                     </div>
                     <div className=" text-white text-xl font-extrabold lg:font-bold lg:text-[32px] leading-6 lg:leading-10 capitalize tracking-[-0.4px] lg:tracking-[-0.64px]">
-                      Crypto Screener Application
+                      {eachItem.name}
                     </div>
                     <div className=" text-sm font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm ">
-                      I'm Flora Sheen Lorem Ipsum is simply dummy text of the
-                      printing and typesetting industry. Lorem Ipsum has been
-                      the industry's standard dummy text ever since the 1500s,
-                      when an unknown printer took a galley of type and
-                      scrambled it to specimen book.
+                      {eachItem.description}
                     </div>
                   </div>
                 </div>

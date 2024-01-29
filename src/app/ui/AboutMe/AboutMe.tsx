@@ -23,23 +23,22 @@ export default function AboutMe() {
             </div>
           </div>
           <div className=" text-sm font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm ">
-            I'm a passionate, self-proclaimed designer who specializes in full
-            stack development (React.js & Node.js). I am very enthusiastic about
-            bringing the technical and visual aspects of digital products to
-            life. User experience, pixel perfect design, and writing clear,
-            readable, highly performant code matters to me. <br />
+            I'm a frontend developer passionate about translating ideas into
+            compelling digital experiences. For me, the beauty lies in the
+            process of creating seamless user interfaces that resonate with
+            people on a meaningful level. <br />
             <br />
-            I'm a passionate, self-proclaimed designer who specializes in full
-            stack development (React.js & Node.js). I am very enthusiastic about
-            bringing the technical and visual aspects of digital products to
-            life. User experience, pixel perfect design, and writing clear,
-            readable, highly performant code matters to me. <br />
+            While I've primarily focused on frontend development, I'm exploring
+            backend technologies, cloud computing, and delving into artificial
+            intelligence, focusing on generative AI. This journey is aimed at
+            transforming me into a well-rounded full-stack developer, adding an
+            extra layer of innovation to my projects, and enhancing user
+            experiences. <br />
             <br />
-            I'm a passionate, self-proclaimed designer who specializes in full
-            stack development (React.js & Node.js). I am very enthusiastic about
-            bringing the technical and visual aspects of digital products to
-            life. User experience, pixel perfect design, and writing clear,
-            readable, highly performant code matters to me.
+            Building this solid foundation not only excites me but also opens
+            doors to creating comprehensive and integrated solutions. If you
+            appreciate collaboration, innovation, and the process of crafting
+            impactful digital solutions, I'd love to connect.
           </div>
         </div>
       </div>
