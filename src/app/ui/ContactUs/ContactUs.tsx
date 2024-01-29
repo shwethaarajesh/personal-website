@@ -48,7 +48,7 @@ export default function ContactUs() {
   };
   const form = useRef<HTMLFormElement>(null);
   return (
-    <div className="mx-4 py-10 lg:py-[60px] flex flex-col lg:grid lg:grid-cols-2 lg:gap-24 lg:px-8 start items-start lg:items-center">
+    <div className="mx-4 py-10 lg:py-[60px] flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-24 lg:px-8 start items-start lg:items-center">
       <div className="w-full flex flex-col py-5 justify-center items-start self-stretch gap-5 ">
         <form ref={form}>
           <textarea
