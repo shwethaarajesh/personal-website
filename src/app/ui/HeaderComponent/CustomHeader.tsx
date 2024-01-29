@@ -3,12 +3,16 @@ import { MdOutlineMenu } from "react-icons/md";
 import TabButton from "../components/TabButton/TabButton";
 import DownloadButton from "../components/DownloadButton/DownloadButton";
 import ImageComponent from "../components/ImageComponent/ImageComponent";
+import { MutableRefObject, RefObject } from "react";
 
 export default function CustomHeader(props: {
   isOpen: boolean;
   setIsOpen: Function;
+  headers: {
+    name: string;
+    ref: RefObject<HTMLDivElement>;
+  }[];
 }) {
-  const headers = ["About", "Skills", "Projects", "Contact me"];
   return (
     <div
       className={` fixed w-full h-[100px] bg-pink-50 px-2 flex  lg:px-12 xl:px-16  2xl:px-20 py-6 `}
@@ -25,9 +29,17 @@ export default function CustomHeader(props: {
           {/* <div className="text-sm italic ">Hello</div> */}
         </div>
         <div className=" hidden md:flex justify-center items-center space-x-8">
-          {headers.map((eachHeader) => (
-            <div key={eachHeader}>
-              <TabButton headername={eachHeader}></TabButton>
+          {props.headers.map((eachHeader) => (
+            <div
+              key={eachHeader.name}
+              className=""
+              onClick={() => {
+                eachHeader.ref.current?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              <TabButton headername={eachHeader.name}></TabButton>
             </div>
           ))}
         </div>

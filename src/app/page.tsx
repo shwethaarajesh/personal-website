@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import Sidebar from "./ui/Sidebar/Sidebar";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import CustomHeader from "./ui/HeaderComponent/CustomHeader";
 import Skills from "./ui/Skills/Skills";
 import Intro from "./ui/Intro/Intro";
@@ -13,32 +12,63 @@ import Footer from "./ui/Footer/Footer";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const experiencesRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const headers = [
+    {
+      name: "Skills",
+      ref: skillsRef,
+    },
+    {
+      name: "Experiences",
+      ref: experiencesRef,
+    },
+    {
+      name: "Projects",
+      ref: projectsRef,
+    },
+    {
+      name: "Contact me",
+      ref: contactRef,
+    },
+  ];
   return (
     <div className="bg-white  w-screen h-full">
-      <CustomHeader setIsOpen={setIsOpen} isOpen={isOpen}></CustomHeader>
+      <CustomHeader
+        headers={headers}
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+      ></CustomHeader>
       <div className="flex justify-between pt-[100px]">
         <div className="w-full">
           <div className="lg:mx-8">
             <Intro></Intro>
           </div>
-          <div className="lg:mx-8">
+          <div className="lg:mx-8 scroll-mt-[100px]" ref={skillsRef}>
             <Skills></Skills>
           </div>
-          <Experiences></Experiences>
-
-          <div className="lg:mx-8">
+          <div className="scroll-mt-[100px]" ref={experiencesRef}>
+            <Experiences></Experiences>
+          </div>
+          <div className="lg:mx-8 scroll-mt-[100px]">
             <AboutMe></AboutMe>
           </div>
-
-          <MyProjects></MyProjects>
-
-          <div className="lg:mx-8">
+          <div ref={projectsRef} className="scroll-mt-[100px]">
+            <MyProjects></MyProjects>
+          </div>
+          <div className="lg:mx-8 scroll-mt-[100px]" ref={contactRef}>
             <ContactUs></ContactUs>
           </div>
           <Footer></Footer>
         </div>
         <div className="items-end justify-end">
-          <Sidebar setIsOpen={setIsOpen} isOpen={isOpen}></Sidebar>
+          <Sidebar
+            headers={headers}
+            setIsOpen={setIsOpen}
+            isOpen={isOpen}
+          ></Sidebar>
         </div>
       </div>
     </div>
