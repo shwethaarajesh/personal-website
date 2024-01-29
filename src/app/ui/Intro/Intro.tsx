@@ -23,11 +23,11 @@ export default function Intro() {
           </div>
         </div>
         <div className="my-8 text-base font-normal leading-6 tracking-[0.32px] text-zinc-500">
-          I am dedicated frontend developer specializing in React.js, Next.js,
-          and React Native, I bring over two years of experience crafting
-          seamless web and mobile applications. My proficiency extends to
-          building high-performance, optimized solutions with meticulous
-          attention to design details.
+          I am frontend developer specializing in React.js, Next.js, and React
+          Native, I bring over two years of experience crafting seamless web and
+          mobile applications. My proficiency extends to building
+          high-performance, optimized solutions with meticulous attention to
+          design details.
         </div>
       </div>
       <ImageComponent
