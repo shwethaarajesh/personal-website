@@ -9,6 +9,8 @@ export default function ContactUs() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [description, setDescription] = useState("");
+
+  const [loading, setLoading] = useState(false);
   const handleNameChange = (e: any) => {
     setName(e.target.value);
   };
@@ -30,6 +32,7 @@ export default function ContactUs() {
       alert("Name, Email and Description are required");
       return;
     }
+    setLoading(true);
     emailjs
       .sendForm(
         "service_5kftdvq",
@@ -40,8 +43,15 @@ export default function ContactUs() {
       .then(
         (result) => {
           console.log(result.text);
+          setLoading(false);
+          alert("Email sent successfully");
+          setName("");
+          setDescription("");
+          setEmail("");
+          setWebsite("");
         },
         (error) => {
+          setLoading(false);
           console.log(error.text);
         }
       );
@@ -92,9 +102,13 @@ export default function ContactUs() {
           <div className="flex gap-6">
             <button
               onClick={onClickGetInTouch}
-              className="px-4 py-3 items-center text-white justify-center rounded-[4px] bg-black text-base font-semibold leading-5 tracking-[0.32px]"
+              className={`px-4 py-3 items-center active:border active:border-solid active:border-black active:bg-white active:text-black  justify-center rounded-[4px] ${
+                false
+                  ? "bg-white text-black border active:border-solid border-black"
+                  : "bg-black text-white border-none"
+              }  text-base font-semibold leading-5 tracking-[0.32px]`}
             >
-              Get In Touch
+              {loading ? "Sending" : "Get In Touch"}
             </button>
             <a
               href="http://www.linkedin.com/in/shwethaa-r-a391131b4"
