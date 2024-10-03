@@ -23,22 +23,19 @@ export default function AboutMe() {
             </div>
           </div>
           <div className=" text-sm font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm ">
-            I'm a frontend developer passionate about translating ideas into
-            compelling digital experiences. For me, the beauty lies in the
-            process of creating seamless user interfaces that resonate with
-            people on a meaningful level. <br />
+            
+            I'm a full-stack developer passionate about turning ideas into seamless digital experiences. 
+            I enjoy building both intuitive user interfaces and efficient backend systems that work together to create meaningful solutions.  
             <br />
-            While I've primarily focused on frontend development, I'm exploring
-            backend technologies, cloud computing, and delving into artificial
-            intelligence, focusing on generative AI. This journey is aimed at
-            transforming me into a well-rounded full-stack developer, adding an
-            extra layer of innovation to my projects, and enhancing user
-            experiences. <br />
             <br />
-            Building this solid foundation not only excites me but also opens
-            doors to creating comprehensive and integrated solutions. If you
-            appreciate collaboration, innovation, and the process of crafting
-            impactful digital solutions, I'd love to connect.
+            My technical expertise spans frontend and backend development, where I’ve used technologies like 
+            React, ReactNative, Xamarin, Express, MongoDB, and PostgreSQL to build optimized solutions. 
+            Additionally, I’ve worked on AI-driven projects involving deep learning models that enhance functionality and user interaction. 
+            <br />
+            <br />
+            At Carnegie Mellon University, I’m furthering my knowledge of scalable systems this semester with Design Patterns and Formal Methods, 
+            with the goal of building more robust, innovative applications. 
+            If you're excited about the intersection of AI, software engineering, and scalable systems, I’d love to connect.
           </div>
         </div>
       </div>
