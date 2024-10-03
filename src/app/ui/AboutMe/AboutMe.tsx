@@ -4,7 +4,7 @@ import ImageComponent from "../components/ImageComponent/ImageComponent";
 
 export default function AboutMe() {
   return (
-    <div className="my-10 py-10 border border-pink-50 shadow-pink-200 shadow-md mx-4 lg:py-[60px] gap-6 lg:gap-6 px-6 xl:px-20 flex flex-col-reverse items-center  lg:flex-row lg:justify-between">
+    <div className="my-10 py-10 border border-primary shadow-primary-dark shadow-md mx-4 lg:py-[60px] gap-6 lg:gap-6 px-6 xl:px-20 flex flex-col-reverse items-center  lg:flex-row lg:justify-between">
       <div className="flex flex-col lg:flex-row px-4 lg:gap-20 xl:gap-10 items-center lg:px-8 ">
         <div className=" flex items-center justify-center">
           <ImageComponent

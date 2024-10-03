@@ -36,8 +36,8 @@ export default function SkillCategories(props: {
               }}
               className={`p-3 ${
                 selectedCategory === eachCategory.category
-                  ? "bg-pink-200"
-                  : "bg-pink-50"
+                  ? "bg-primary-dark text-black"
+                  : "bg-primary text-white"
               }   aspect-video flex justify-center items-center text-sm`}
             >
               {eachCategory.category}
@@ -46,7 +46,7 @@ export default function SkillCategories(props: {
         })}
       </div>
       <TransitionGroup
-        className="lg:px-12 border-2 border-pink-50 shadow-sm my-4 py-4 px-4 md:px-6 grid grid-cols-2 xsm:grid-cols-3
+        className="lg:px-12 border-2 border-primary shadow-sm my-4 py-4 px-4 md:px-6 grid grid-cols-2 xsm:grid-cols-3
                          md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 
                          2xl:grid-cols-7 3xl:grid-cols-8 gap-x-5 md:gap-x-6 gap-y-6 lg:gap-x-7 xl:gap-x-8  lg:gap-y-7"
       >

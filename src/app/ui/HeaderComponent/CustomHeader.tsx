@@ -15,7 +15,7 @@ export default function CustomHeader(props: {
 }) {
   return (
     <div
-      className={` fixed w-full h-[100px] bg-pink-50 px-2 flex  lg:px-12 xl:px-16  2xl:px-20 py-6 `}
+      className={` fixed w-full h-[100px] bg-primary px-2 flex  lg:px-12 xl:px-16  2xl:px-20 py-6 text-white `}
     >
       <div className={`md:px-8 flex justify-between items-center w-full `}>
         <div className="flex justify-center items-center space-x-1">

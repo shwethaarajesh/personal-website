@@ -10,7 +10,7 @@ export default function DownloadButton(props: {
     <a
       href="/personal-website/Resume.pdf"
       download={props.title}
-      className={clsx("rounded bg-black text-white space-x-2 justify-center", {
+      className={clsx("rounded bg-white text-black space-x-2 justify-center", {
         "w-full flex py-2 px-3": props.variation == "mobile",
         "hidden md:flex py-4 px-5":
           !props.variation || props.variation == "desktop",
@@ -21,7 +21,7 @@ export default function DownloadButton(props: {
     >
       <div className={`text-sm leading-6 font-semibold`}>{props.title}</div>
       <ImageComponent
-        title={"download.png"}
+        title={"download-black.png"}
         alt={"Download image"}
         height={20}
         width={20}

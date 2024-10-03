@@ -111,7 +111,7 @@ export default function ContactUs() {
               {loading ? "Sending" : "Get In Touch"}
             </button>
             <a
-              href="http://www.linkedin.com/in/shwethaa-r-a391131b4"
+              href="https://www.linkedin.com/in/shwethaa-rajesh/"
               target="_blank"
               className=" cursor-pointer rounded-[4px] p-2 flex justify-center items-center border border-black hover:text-white hover:bg-black hover:border-none"
             >
@@ -136,9 +136,9 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="gap-4 flex flex-col">
-              <div className=" text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold lg:leading-8 lg:tracking-[-0.56px]">
+              <a href="mailto:shwethaarajesh14@gmail.com" className=" text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold hover:underline lg:leading-8 lg:tracking-[-0.56px]">
                 shwethaarajesh14@gmail.com
-              </div>
+              </a>
               {/* <div className=" text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold lg:leading-8 lg:tracking-[-0.56px]">
               +919003962244
             </div> */}

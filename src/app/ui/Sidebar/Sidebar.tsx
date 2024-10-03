@@ -30,7 +30,7 @@ export default function Sidebar(props: {
       }`}
     >
       <div
-        className={` sidebar-height  border border-l-1 border-gray-200 bg-pink-50 transition-transform transform ${
+        className={` sidebar-height  border border-l-1 border-gray-200 bg-primary transition-transform transform ${
           isOpenSidebar ? " sm:w-60 w-48" : "w-0"
         }`}
         style={{ transition: "width 300ms cubic-bezier(0.2,0,0,1) 0s" }}
@@ -46,7 +46,7 @@ export default function Sidebar(props: {
             return (
               <div
                 key={eachHeader.name}
-                className="border hover:bg-pink-100 border-x-0 
+                className="border hover:bg-primary-mid border-x-0 
                 border-t-0 cursor-pointer p-3 
                 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-lg leading-6 capitalize font-medium  tracking-[-.4px]"
                 onClick={() => {

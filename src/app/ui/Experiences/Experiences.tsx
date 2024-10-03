@@ -4,9 +4,9 @@ import ExperienceComponent from "../components/ExperienceComponent/ExperienceCom
 
 export default function Experiences() {
   return (
-    <div className=" py-10 my-4 lg:py-[60px] bg-pink-50">
+    <div className=" py-10 my-4 lg:py-[60px] bg-primary ">
       <div className=" mx-4 lg:px-20">
-        <div className="flex gap-2 py-5 justify-center items-center ">
+        <div className="flex gap-2 py-5 justify-center items-center text-white">
           <div className="text-xl lg:text-3xl font-normal leading-8 tracking-[-0.56px] lg:leading-[56px] lg:tracking-[0.96px]">
             My
           </div>

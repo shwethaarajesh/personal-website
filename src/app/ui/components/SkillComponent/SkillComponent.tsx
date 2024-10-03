@@ -7,7 +7,7 @@ export default function SkillComponent(props: {
   url: string;
 }) {
   return (
-    <div className=" items-center shadow-md w-full aspect-square flex hover:shadow-2xl hover:bg-pink-100 flex-col justify-between p-6  bg-slate-50  border-[2px] text-center border-pink-200">
+    <div className=" items-center shadow-md w-full aspect-square flex hover:shadow-2xl hover:bg-primary-mid flex-col justify-between p-6  bg-slate-50  border-[2px] text-center border-primary-dark">
       <ImageComponent
         title={props.url}
         alt={props.skillName}
