@@ -7,7 +7,7 @@ import SkillComponent from "../components/SkillComponent/SkillComponent";
 export default function Skills() {
   const skillCategories: skillCategoryInterface[] = [
     {
-      category: "Web Development ",
+      category: "Web and Mobile Development ",
       list: [
         {
           name: "ReactJS",
@@ -37,11 +37,6 @@ export default function Skills() {
           name: "Styled components",
           icon: "icon-styledcomponents.png",
         },
-      ],
-    },
-    {
-      category: "Mobile Development",
-      list: [
         {
           name: "React Native",
           icon: "icon-react.png",
@@ -49,6 +44,27 @@ export default function Skills() {
         {
           name: "Xamarin Forms",
           icon: "icon-xamarin.png",
+        },
+      ],
+    },
+    {
+      category: "AI and Machine Learning",
+      list: [
+        {
+          name: "Deep Learning",
+          icon: "deep-learning.png",
+        },
+        {
+          name: "Tensorflow",
+          icon: "tensorflow.svg",
+        },
+        {
+          name: "Numpy",
+          icon: "numpy.svg",
+        },
+        {
+          name: "Scikit-learn",
+          icon: "scikit-learn.svg",
         },
       ],
     },
