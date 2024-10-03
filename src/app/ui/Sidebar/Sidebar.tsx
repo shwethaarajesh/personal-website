@@ -25,7 +25,7 @@ export default function Sidebar(props: {
 
   return (
     <div
-      className={` md:hidden ${
+      className={` md:hidden text-white ${
         props.isOpen ? "fixed top-[100px] right-0" : "hidden"
       }`}
     >
@@ -48,6 +48,7 @@ export default function Sidebar(props: {
                 key={eachHeader.name}
                 className="border hover:bg-primary-mid border-x-0 
                 border-t-0 cursor-pointer p-3 
+                hover:text-black
                 hover:shadow-[0_14px_12px_-12px_rgba(0,0,0,0.4)] text-lg leading-6 capitalize font-medium  tracking-[-.4px]"
                 onClick={() => {
                   eachHeader.ref.current?.scrollIntoView({

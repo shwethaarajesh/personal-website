@@ -19,20 +19,32 @@ export default function Experiences() {
             designation="Software Developer I at Mckinsey & Company"
             duration="Aug 2022 - Jan 2024"
             description="
-            As a Software Developer I, I worked on building multiple applications with a focus on core component development, including search, filters and other UI elements. Additionally, I led a dynamic team in crafting a Figma plugin for seamless designer workflows within an internal asset, while spearheading the creation of an innovative tool converting wireframes into highly efficient, responsive code—potentially reducing development effort by up to 80%."
+            As a Software Development Engineer I, I contributed to the development of multiple applications, 
+            focusing on core components like search functionality, filters, and UI elements. 
+            I led a team of six in building a Figma plugin to streamline designer workflows and spearheaded the creation of an innovative tool 
+            that converted wireframes into responsive, production-ready code—reducing development time by 80%. 
+            I also played a pivotal role in migrating a mobile app from Xamarin Forms to .NET MAUI and React Native, 
+            enhancing cross-platform compatibility and performance."
             icon="mck-icon.webp"
           ></ExperienceComponent>
           <ExperienceComponent
             designation="Software Developer Intern at Mckinsey & Company"
             duration="Feb 2022 - Aug 2022"
-            description="As a Software Developer Intern I successfully completed an intensive 8-week program, mastering frontend, backend, and cloud development, delivering weekly mini-applications. I worked on an e-commerce application where I optimized search load times by 1.5x and boosted performance by 3x. Achieving a perfect accessibility score of 100%, I proficiently implemented design changes within project timelines. I also demonstrated my mentoring skills by effectively onboarding colleagues in the new technology framework Builder.io."
+            description="During an intensive 8-week internship program, I worked across frontend, backend, and cloud technologies,
+             delivering mini-applications weekly. I optimized search load times by 1.5x and overall performance by 3x for an e-commerce platform,
+              earning a perfect accessibility score of 100%.
+               I also implemented design changes under tight deadlines and mentored new hires, facilitating smoother adoption of Builder.io and 
+               contributing to overall project success."
             icon="mck-icon.webp"
           ></ExperienceComponent>
           <ExperienceComponent
             designation="Research Intern at Samsung Research Institute"
             duration="Sep 2020 - Nov 2021"
             description="
-            As a Samsung PRISM Research Intern,  I led the optimization of a deep learning model, demonstrating GRU's superiority over LSTM with a 91% accuracy in MOS score estimation. Managed a dataset of 10,000+ noise recordings, implemented a custom mixing algorithm, and pioneered MFCC adoption, reducing Mean Squared Error from 0.21 to 0.167. Culminated with a mobile app for real-time MOS score estimation, earning a certificate of excellence for substantial contributions."
+            As a Research Intern, I developed a deep learning model to estimate the Mean Opinion Score (MOS) for VoIP calls, 
+            achieving 91% accuracy. I optimized the model using Gated Recurrent Units (GRU) and reduced Mean Squared Error (MSE) by 20%. 
+            My contributions included creating a custom dataset of noise recordings and pioneering the use of Mel-frequency cepstral coefficients 
+            (MFCCs) for audio preprocessing, ultimately improving real-time MOS score estimation."
             icon="samsung-icon.jpeg"
           ></ExperienceComponent>
         </div>
