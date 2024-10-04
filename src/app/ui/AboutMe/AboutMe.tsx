@@ -10,7 +10,7 @@ export default function AboutMe() {
           <ImageComponent
             title={"profilephoto.jpeg"}
             alt={"About me image"}
-            className="min-w-[400px]"
+            className="min-w-[200px] md:min-w-[400px]"
           ></ImageComponent>
         </div>
         <div className="flex flex-col ">
@@ -22,9 +22,10 @@ export default function AboutMe() {
               Me
             </div>
           </div>
-          <div className=" text-sm font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm ">
+          <div className=" text-sm font-normal tracking-[0.32px] leading-5 text-zinc-500 lg:text-sm text-wrap">
+           <div></div>
             
-            I'm a full-stack developer passionate about turning ideas into seamless digital experiences. 
+           I'm a full-stack developer passionate about turning ideas into seamless digital experiences. 
             I enjoy building both intuitive user interfaces and efficient backend systems that work together to create meaningful solutions.  
             <br />
             <br />

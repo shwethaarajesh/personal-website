@@ -23,7 +23,7 @@ export default function Home() {
       ref: skillsRef,
     },
     {
-      name: "Experiences",
+      name: "Experience",
       ref: experiencesRef,
     },
     {
@@ -40,7 +40,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="bg-white  w-screen h-full">
+    <div className="bg-white  h-full">
       <CustomHeader
         headers={headers}
         setIsOpen={setIsOpen}

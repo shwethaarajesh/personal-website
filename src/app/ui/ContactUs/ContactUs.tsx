@@ -136,7 +136,7 @@ export default function ContactUs() {
               </div>
             </div>
             <div className="gap-4 flex flex-col">
-              <a href="mailto:shwethaarajesh14@gmail.com" className=" text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold hover:underline lg:leading-8 lg:tracking-[-0.56px]">
+              <a href="mailto:shwethaarajesh14@gmail.com" className=" text-base md:text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold hover:underline lg:leading-8 lg:tracking-[-0.56px]">
                 shwethaarajesh14@gmail.com
               </a>
               {/* <div className=" text-xl font-bold leading-6 tracking-[-0.4px] lg:text-[28px] lg:font-semibold lg:leading-8 lg:tracking-[-0.56px]">
