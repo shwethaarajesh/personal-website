@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function ContactUs() {
   const [name, setName] = useState("");
@@ -10,6 +13,10 @@ export default function ContactUs() {
   const [website, setWebsite] = useState("");
   const [description, setDescription] = useState("");
 
+  const notifySuccess = () => toast.success("Email sent successfully");
+  const notifyBlank = () => toast.error("Name, Email and Description are require");
+  const notifyInvalidEmaiil= () => toast.error("Enter valid email address");
+  const notifyInvalidName= () => toast.error("Name has to be atleast 3 letters");
   const [loading, setLoading] = useState(false);
   const handleNameChange = (e: any) => {
     setName(e.target.value);
@@ -29,8 +36,18 @@ export default function ContactUs() {
   }, []);
   const onClickGetInTouch = () => {
     if (!name || !email || !description) {
-      alert("Name, Email and Description are required");
+      // alert("Name, Email and Description are required");
+      notifyBlank()
       return;
+    }
+    if(name.length <3){
+      notifyInvalidName()
+      return
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)){
+      notifyInvalidEmaiil()
+      return
     }
     setLoading(true);
     emailjs
@@ -44,7 +61,8 @@ export default function ContactUs() {
         (result) => {
           console.log(result.text);
           setLoading(false);
-          alert("Email sent successfully");
+          // alert("Email sent successfully");
+          notifySuccess()
           setName("");
           setDescription("");
           setEmail("");
@@ -59,6 +77,8 @@ export default function ContactUs() {
   const form = useRef<HTMLFormElement>(null);
   return (
     <div className="mx-4 py-10 lg:py-[60px]  lg:px-8">
+
+<ToastContainer position="top-center" hideProgressBar={true} closeOnClick closeButton={false}  />
       <div className="flex gap-2 py-3 lg:py-5 justify-center items-center lg:justify-start lg:items-start">
         <div className=" text-2xl lg:text-3xl font-normal leading-[56px] tracking-[-0.96px] ">
           Contact
