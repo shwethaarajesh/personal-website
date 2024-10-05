@@ -33,7 +33,7 @@ export default function Intro() {
         </div>
       </div>
       <ImageComponent
-        title={"intropic.jpeg"}
+        title={"Intropic.jpeg"}
         alt={"Caricature of a woman programmer"}
         width={500}
         className=" max-h-[300px]   md:min-w-[400px] md:max-h-[400px] 2xl:max-h-max"
